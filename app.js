@@ -9,13 +9,14 @@ app.set('views', path.join(__dirname, 'views')) ;
 
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
-app.use(bodyParser());
+app.use(bodyParser);
 
 app.use(require('./todos'));
 
 app.listen(1337, function(){
 	console.log('ready on port 1337');
 });
+
 
 /*var http = require('http');
 http.createServer(function(req,res){
